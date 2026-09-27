@@ -213,11 +213,11 @@ void handleSubscriptionCalculator() {
     cout << "\n===============================================================\n";
     cout << "      MODULE 2: NETFLIX PLAN ADVISOR & COST CALCULATOR         \n";
     cout << "===============================================================\n";
-    cout << "Available Plans (Official Netflix Malaysia Standard Rates):\n";
-    cout << "  1. Mobile Plan   - RM 18.90/mo (480p SD, 1 phone/tablet)\n";
-    cout << "  2. Basic Plan    - RM 29.90/mo (720p HD, 1 screen at a time)\n";
-    cout << "  3. Standard Plan - RM 49.90/mo (1080p Full HD, 2 screens)\n";
-    cout << "  4. Premium Plan  - RM 62.90/mo (4K UHD + Spatial Audio, 4 screens)\n";
+    cout << "Available Plans (Official Netflix Malaysia Rates - Updated 2026):\n";
+    cout << "  1. Mobile Plan   - RM 19.90/mo (480p SD, 1 phone/tablet)\n";
+    cout << "  2. Basic Plan    - RM 33.90/mo (720p HD, 1 screen at a time)\n";
+    cout << "  3. Standard Plan - RM 55.90/mo (1080p Full HD, 2 screens)\n";
+    cout << "  4. Premium Plan  - RM 69.90/mo (4K UHD + Spatial Audio, 4 screens)\n";
     cout << "Select your desired plan (1-4): ";
 
     if (!(cin >> planChoice) || planChoice < 1 || planChoice > 4) {
@@ -229,25 +229,25 @@ void handleSubscriptionCalculator() {
     switch (planChoice) {
         case 1:
             planName = "Mobile";
-            monthlyRate = 18.90;
+            monthlyRate = 19.90;
             screensAllowed = 1;
             resolution = "480p Standard Definition (SD)";
             break;
         case 2:
             planName = "Basic";
-            monthlyRate = 29.90;
+            monthlyRate = 33.90;
             screensAllowed = 1;
             resolution = "720p High Definition (HD)";
             break;
         case 3:
             planName = "Standard";
-            monthlyRate = 49.90;
+            monthlyRate = 55.90;
             screensAllowed = 2;
             resolution = "1080p Full High Definition (FHD)";
             break;
         case 4:
             planName = "Premium";
-            monthlyRate = 62.90;
+            monthlyRate = 69.90;
             screensAllowed = 4;
             resolution = "4K Ultra HD (UHD) + Spatial Audio";
             break;

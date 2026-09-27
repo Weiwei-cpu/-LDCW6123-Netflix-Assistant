@@ -46,5 +46,5 @@ g++ -o netflix_assistant main.cpp
 
 ## 4. Test Scenarios
 - **Scenario A (Recommendation)**: Select Genre `1` (Action) -> Format `2` (Movie) -> Output: *Extraction 2 (94% match)*.
-- **Scenario B (Subscription)**: Select Plan `3` (Standard RM 49.90) -> 3 Months -> Telco Partner `y` -> Output: Subtotal RM 149.70, Rebate RM 14.97, Total RM 134.73.
+- **Scenario B (Subscription)**: Select Plan `3` (Standard RM 55.90) -> 3 Months -> Telco Partner `y` -> Output: Subtotal RM 167.70, Rebate RM 16.77, Total RM 150.93.
 - **Scenario C (Invalid Input)**: Enter invalid text `abc` or numbers outside `1-4` -> System displays friendly error message and prompts user again without crashing.
