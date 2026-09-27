@@ -195,7 +195,7 @@ void handleRecommendation() {
 void handleSubscriptionCalculator() {
     int planChoice = 0;
     int months = 0;
-    char isStudent;
+    char isTelcoBundle;
     double monthlyRate = 0.0;
     string planName = "";
     int screensAllowed = 0;
@@ -204,11 +204,11 @@ void handleSubscriptionCalculator() {
     cout << "\n===============================================================\n";
     cout << "      MODULE 2: NETFLIX PLAN ADVISOR & COST CALCULATOR         \n";
     cout << "===============================================================\n";
-    cout << "Available Plans (Malaysia Pricing Standard):\n";
-    cout << "  1. Mobile Plan   - RM 17.00/mo (480p SD, 1 phone/tablet)\n";
-    cout << "  2. Basic Plan    - RM 29.00/mo (720p HD, 1 screen at a time)\n";
-    cout << "  3. Standard Plan - RM 45.00/mo (1080p Full HD, 2 screens)\n";
-    cout << "  4. Premium Plan  - RM 55.00/mo (4K UHD + HDR, 4 screens)\n";
+    cout << "Available Plans (Official Netflix Malaysia Standard Rates):\n";
+    cout << "  1. Mobile Plan   - RM 18.90/mo (480p SD, 1 phone/tablet)\n";
+    cout << "  2. Basic Plan    - RM 29.90/mo (720p HD, 1 screen at a time)\n";
+    cout << "  3. Standard Plan - RM 49.90/mo (1080p Full HD, 2 screens)\n";
+    cout << "  4. Premium Plan  - RM 62.90/mo (4K UHD + Spatial Audio, 4 screens)\n";
     cout << "Select your desired plan (1-4): ";
 
     if (!(cin >> planChoice) || planChoice < 1 || planChoice > 4) {
@@ -220,25 +220,25 @@ void handleSubscriptionCalculator() {
     switch (planChoice) {
         case 1:
             planName = "Mobile";
-            monthlyRate = 17.00;
+            monthlyRate = 18.90;
             screensAllowed = 1;
             resolution = "480p Standard Definition (SD)";
             break;
         case 2:
             planName = "Basic";
-            monthlyRate = 29.00;
+            monthlyRate = 29.90;
             screensAllowed = 1;
             resolution = "720p High Definition (HD)";
             break;
         case 3:
             planName = "Standard";
-            monthlyRate = 45.00;
+            monthlyRate = 49.90;
             screensAllowed = 2;
             resolution = "1080p Full High Definition (FHD)";
             break;
         case 4:
             planName = "Premium";
-            monthlyRate = 55.00;
+            monthlyRate = 62.90;
             screensAllowed = 4;
             resolution = "4K Ultra HD (UHD) + Spatial Audio";
             break;
@@ -251,14 +251,14 @@ void handleSubscriptionCalculator() {
         return;
     }
 
-    cout << "Are you a student eligible for student promo? (y/n): ";
-    cin >> isStudent;
+    cout << "Subscribed via Malaysian Telco partner bundle (Astro / Unifi / Maxis)? (y/n): ";
+    cin >> isTelcoBundle;
 
     double subtotal = monthlyRate * months;
     double discount = 0.0;
 
-    if (isStudent == 'y' || isStudent == 'Y') {
-        discount = subtotal * 0.15; // 15% student discount
+    if (isTelcoBundle == 'y' || isTelcoBundle == 'Y') {
+        discount = subtotal * 0.10; // 10% Telco Fiber bundle rebate
     }
 
     double totalAmount = subtotal - discount;
@@ -273,10 +273,12 @@ void handleSubscriptionCalculator() {
     cout << "Monthly Fee       : RM " << monthlyRate << "\n";
     cout << "Subtotal          : RM " << subtotal << "\n";
     if (discount > 0.0) {
-        cout << "Student Discount  : - RM " << discount << " (15% OFF Applied!)\n";
+        cout << "Partner Rebate    : - RM " << discount << " (10% Telco Bundle Rebate Applied)\n";
     }
     cout << "TOTAL PAYABLE     : RM " << totalAmount << "\n";
     cout << "Effective Cost    : RM " << costPerScreen << " per screen / month\n";
+    cout << "Market Fact       : Netflix officially offers zero student discounts globally;\n";
+    cout << "                    rebates are exclusively via ISP/Telco home fiber bundles.\n";
     cout << "---------------------------------------------------------------\n\n";
 }
 

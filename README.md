@@ -11,7 +11,7 @@ This interactive C++ console application is designed to accompany **Part 1: Inno
 
 The program models Netflix's core digital innovations that disrupted the traditional home video rental industry (such as Blockbuster):
 1. **Algorithmic Content Recommendation**: Simulates Netflix's personalized recommendation engine based on user genre preference and viewing format (quick TV series binge vs. feature films).
-2. **Flexible Subscription & Cost Advisor**: Simulates Netflix's tiered pricing model (Mobile, Basic, Standard, Premium) with customizable durations and student discount calculations.
+2. **Flexible Subscription & Cost Advisor**: Simulates Netflix's tiered pricing model (Mobile, Basic, Standard, Premium) with official Malaysian rates, customizable durations, and telco partner bundle rebates.
 3. **Disruptive Innovation Factsheet**: Outlines key concepts from **Clayton Christensen's Disruptive Innovation Model**, illustrating how Netflix leveraged high-speed broadband and on-demand streaming to displace traditional brick-and-mortar video rental stores.
 
 ---
@@ -20,7 +20,7 @@ The program models Netflix's core digital innovations that disrupted the traditi
 The program is modularized into dedicated functions:
 - `displayHeader()` / `displayMainMenu()`: Professional user interface layout.
 - `handleRecommendation()`: Processes multi-criteria choices to recommend high-rated titles.
-- `handleSubscriptionCalculator()`: Calculates subscription pricing, student promo discounts, and per-screen shared costs.
+- `handleSubscriptionCalculator()`: Calculates subscription pricing, ISP/Telco fiber partner rebates, and per-screen shared costs.
 - `handleInnovationInsights()`: Interactive theoretical briefing directly linked to Part 1 rubric requirements.
 - `clearInputBuffer()`: Robust error handling preventing program termination on invalid user input.
 
@@ -46,5 +46,5 @@ g++ -o netflix_assistant main.cpp
 
 ## 4. Test Scenarios
 - **Scenario A (Recommendation)**: Select Genre `1` (Action) -> Format `2` (Movie) -> Output: *Extraction 2 (94% match)*.
-- **Scenario B (Subscription)**: Select Plan `3` (Standard RM 45) -> 3 Months -> Student `y` -> Output: Subtotal RM 135.00, Discount RM 20.25, Total RM 114.75.
+- **Scenario B (Subscription)**: Select Plan `3` (Standard RM 49.90) -> 3 Months -> Telco Partner `y` -> Output: Subtotal RM 149.70, Rebate RM 14.97, Total RM 134.73.
 - **Scenario C (Invalid Input)**: Enter invalid text `abc` or numbers outside `1-4` -> System displays friendly error message and prompts user again without crashing.
