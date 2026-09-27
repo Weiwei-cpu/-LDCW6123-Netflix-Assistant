@@ -1,0 +1,8 @@
+# Compiled executables and binaries
+*.exe
+*.o
+*.obj
+*.out
+
+# VS Code directory (optional, ignore workspace settings)
+.vscode/
