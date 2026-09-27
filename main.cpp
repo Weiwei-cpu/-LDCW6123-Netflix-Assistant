@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include <limits>
 
 using namespace std;
@@ -16,6 +17,7 @@ void displayHeader();
 void displayMainMenu();
 void clearInputBuffer();
 void handleRecommendation();
+void handleSubscriptionCalculator();
 
 int main() {
     int choice = 0;
@@ -39,7 +41,7 @@ int main() {
                 handleRecommendation();
                 break;
             case 2:
-                cout << "\n[Notice] Module 2: Subscription Plan & Cost Calculator (Coming in Stage 3)\n\n";
+                handleSubscriptionCalculator();
                 break;
             case 3:
                 cout << "\n[Notice] Module 3: Netflix Disruptive Innovation Story (Coming in Stage 4)\n\n";
@@ -181,5 +183,94 @@ void handleRecommendation() {
     }
 
     cout << "Algorithm   : Recommended by Netflix Collaborative Filtering AI.\n";
+    cout << "---------------------------------------------------------------\n\n";
+}
+
+// Module 2: Netflix Subscription Plan Advisor & Billing Calculator
+void handleSubscriptionCalculator() {
+    int planChoice = 0;
+    int months = 0;
+    char isStudent;
+    double monthlyRate = 0.0;
+    string planName = "";
+    int screensAllowed = 0;
+    string resolution = "";
+
+    cout << "\n===============================================================\n";
+    cout << "      MODULE 2: NETFLIX PLAN ADVISOR & COST CALCULATOR         \n";
+    cout << "===============================================================\n";
+    cout << "Available Plans (Malaysia Pricing Standard):\n";
+    cout << "  1. Mobile Plan   - RM 17.00/mo (480p SD, 1 phone/tablet)\n";
+    cout << "  2. Basic Plan    - RM 29.00/mo (720p HD, 1 screen at a time)\n";
+    cout << "  3. Standard Plan - RM 45.00/mo (1080p Full HD, 2 screens)\n";
+    cout << "  4. Premium Plan  - RM 55.00/mo (4K UHD + HDR, 4 screens)\n";
+    cout << "Select your desired plan (1-4): ";
+
+    if (!(cin >> planChoice) || planChoice < 1 || planChoice > 4) {
+        cout << "\n[!] Error: Invalid plan selection. Returning to Main Menu.\n\n";
+        clearInputBuffer();
+        return;
+    }
+
+    switch (planChoice) {
+        case 1:
+            planName = "Mobile";
+            monthlyRate = 17.00;
+            screensAllowed = 1;
+            resolution = "480p Standard Definition (SD)";
+            break;
+        case 2:
+            planName = "Basic";
+            monthlyRate = 29.00;
+            screensAllowed = 1;
+            resolution = "720p High Definition (HD)";
+            break;
+        case 3:
+            planName = "Standard";
+            monthlyRate = 45.00;
+            screensAllowed = 2;
+            resolution = "1080p Full High Definition (FHD)";
+            break;
+        case 4:
+            planName = "Premium";
+            monthlyRate = 55.00;
+            screensAllowed = 4;
+            resolution = "4K Ultra HD (UHD) + Spatial Audio";
+            break;
+    }
+
+    cout << "Enter subscription duration in months (1-12): ";
+    if (!(cin >> months) || months < 1 || months > 12) {
+        cout << "\n[!] Error: Duration must be between 1 and 12 months.\n\n";
+        clearInputBuffer();
+        return;
+    }
+
+    cout << "Are you a student eligible for student promo? (y/n): ";
+    cin >> isStudent;
+
+    double subtotal = monthlyRate * months;
+    double discount = 0.0;
+
+    if (isStudent == 'y' || isStudent == 'Y') {
+        discount = subtotal * 0.15; // 15% student discount
+    }
+
+    double totalAmount = subtotal - discount;
+    double costPerScreen = totalAmount / (screensAllowed * months);
+
+    cout << fixed << setprecision(2);
+    cout << "\n--------------------- BILLING ESTIMATE ------------------------\n";
+    cout << "Selected Plan     : Netflix " << planName << " Plan\n";
+    cout << "Supported Quality : " << resolution << "\n";
+    cout << "Simultaneous Screens: " << screensAllowed << " Screen(s)\n";
+    cout << "Subscription Time : " << months << " Month(s)\n";
+    cout << "Monthly Fee       : RM " << monthlyRate << "\n";
+    cout << "Subtotal          : RM " << subtotal << "\n";
+    if (discount > 0.0) {
+        cout << "Student Discount  : - RM " << discount << " (15% OFF Applied!)\n";
+    }
+    cout << "TOTAL PAYABLE     : RM " << totalAmount << "\n";
+    cout << "Effective Cost    : RM " << costPerScreen << " per screen / month\n";
     cout << "---------------------------------------------------------------\n\n";
 }
