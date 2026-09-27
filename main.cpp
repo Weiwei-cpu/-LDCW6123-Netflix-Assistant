@@ -3,6 +3,9 @@
 // Project : Part 2 - Interactive C++ Program
 // Topic   : Netflix Smart Content Recommender & Subscription Assistant
 // Author  : Lee Wei Jin
+// Description: An interactive C++ system simulating Netflix core services and
+//              showcasing its disruptive innovation trajectory from physical
+//              DVD rentals to global algorithmic video streaming.
 // ============================================================================
 
 #include <iostream>
@@ -18,6 +21,7 @@ void displayMainMenu();
 void clearInputBuffer();
 void handleRecommendation();
 void handleSubscriptionCalculator();
+void handleInnovationInsights();
 
 int main() {
     int choice = 0;
@@ -29,9 +33,9 @@ int main() {
         displayMainMenu();
         cout << "Enter your choice (1-4): ";
 
-        // Input validation: ensure user entered an integer
+        // Robust input validation: ensure user entered an integer
         if (!(cin >> choice)) {
-            cout << "\n[!] Error: Invalid input! Please enter a number between 1 and 4.\n\n";
+            cout << "\n[!] Error: Invalid input! Please enter a numeric value (1-4).\n\n";
             clearInputBuffer();
             continue;
         }
@@ -44,15 +48,16 @@ int main() {
                 handleSubscriptionCalculator();
                 break;
             case 3:
-                cout << "\n[Notice] Module 3: Netflix Disruptive Innovation Story (Coming in Stage 4)\n\n";
+                handleInnovationInsights();
                 break;
             case 4:
                 cout << "\n=======================================================\n";
                 cout << " Thank you for using Netflix Assistant. Enjoy streaming!\n";
+                cout << " Developed for LDCW6123 Digital Competence Project.\n";
                 cout << "=======================================================\n";
                 break;
             default:
-                cout << "\n[!] Error: Invalid option selected! Please choose between 1 and 4.\n\n";
+                cout << "\n[!] Error: Out of range! Please choose an option from 1 to 4.\n\n";
                 break;
         }
 
@@ -272,5 +277,50 @@ void handleSubscriptionCalculator() {
     }
     cout << "TOTAL PAYABLE     : RM " << totalAmount << "\n";
     cout << "Effective Cost    : RM " << costPerScreen << " per screen / month\n";
+    cout << "---------------------------------------------------------------\n\n";
+}
+
+// Module 3: Netflix Disruptive Innovation Insights (Direct Link to Part 1)
+void handleInnovationInsights() {
+    int subChoice = 0;
+
+    cout << "\n===============================================================\n";
+    cout << "    MODULE 3: NETFLIX INNOVATION LIFE CYCLE (PART 1 LINK)      \n";
+    cout << "===============================================================\n";
+    cout << "Explore how Netflix transformed home entertainment:\n";
+    cout << "  1. Clayton Christensen's Disruptive Innovation Model\n";
+    cout << "  2. Traditional Rental (Blockbuster) vs. Streaming (Netflix)\n";
+    cout << "  3. Supervening Social & Technological Necessities\n";
+    cout << "Select insight topic (1-3): ";
+
+    if (!(cin >> subChoice) || subChoice < 1 || subChoice > 3) {
+        cout << "\n[!] Error: Invalid selection. Returning to Main Menu.\n\n";
+        clearInputBuffer();
+        return;
+    }
+
+    cout << "\n------------------- INNOVATION BRIEFING -----------------------\n";
+    if (subChoice == 1) {
+        cout << "[DISRUPTIVE INNOVATION MODEL (Clayton Christensen)]\n";
+        cout << "- 1997: Inception as DVD-by-mail service with NO late fees.\n";
+        cout << "- Low-End Foothold: Targeted inconvenient video-store renters.\n";
+        cout << "- 2007: Introduced On-Demand Digital Streaming technology.\n";
+        cout << "- Disruption: Overtook incumbents by moving upmarket into original\n";
+        cout << "  content production (House of Cards, Stranger Things).\n";
+    } else if (subChoice == 2) {
+        cout << "[BLOCKBUSTER (INCUMBENT) vs NETFLIX (DISRUPTOR)]\n";
+        cout << "Feature              Blockbuster              Netflix\n";
+        cout << "---------------------------------------------------------------\n";
+        cout << "Business Model       Physical Brick-and-Mortar Cloud Streaming\n";
+        cout << "Late Return Fees     Heavily penalized users  Zero late fees\n";
+        cout << "Content Catalog      Limited shelf space      Virtually unlimited\n";
+        cout << "Recommendation       Human staff assistance   Machine learning AI\n";
+    } else if (subChoice == 3) {
+        cout << "[SUPERVENING SOCIAL & TECHNOLOGICAL NECESSITIES]\n";
+        cout << "1. High-Speed Broadband Adoption worldwide.\n";
+        cout << "2. Shift to mobile digital smart devices (Smartphones, Smart TVs).\n";
+        cout << "3. Consumer demand for instant, on-demand gratification.\n";
+        cout << "4. Cloud computing infrastructure (AWS) enabling global scale.\n";
+    }
     cout << "---------------------------------------------------------------\n\n";
 }
