@@ -69,7 +69,7 @@ void displayMainMenu() {
     cout << "------------------------- MAIN MENU ---------------------------\n";
     cout << "  1. Movie & TV Show Recommendation (Find what to watch)\n";
     cout << "  2. Netflix Subscription Advisor & Cost Calculator\n";
-    cout << "  3. Netflix Disruptive Innovation Story (Part 1 Link)\n";
+    cout << "  3. Netflix Disruptive Innovation Story\n";
     cout << "  4. Exit Program\n";
     cout << "---------------------------------------------------------------\n";
 }
@@ -194,7 +194,7 @@ void handleRecommendation() {
 void handleSubscriptionCalculator() {
     int planChoice = 0; // Stores the selected subscription plan
     int months = 0;
-    char isTelcoBundle;
+    char isTelcoBundle = 'n';
     double monthlyRate = 0.0;
     string planName = "";
     int screensAllowed = 0;
@@ -256,7 +256,8 @@ void handleSubscriptionCalculator() {
            isTelcoBundle != 'n' && isTelcoBundle != 'N') {
         clearInputBuffer();
         cout << "[!] Invalid input. Please enter 'y' for Yes or 'n' for No: ";
-    } // To prevent users' accidental invalid entries
+    } 
+    clearInputBuffer();
 
     double subtotal = monthlyRate * months;
     double discount = 0.0;
