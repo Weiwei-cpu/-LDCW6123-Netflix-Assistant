@@ -24,7 +24,7 @@ void handleSubscriptionCalculator();
 void handleInnovationInsights();
 
 int main() {
-    int choice = 0; // Stores the user's menu selection
+    int choice = 0;
 
     displayHeader();
 
@@ -92,8 +92,8 @@ void clearInputBuffer() {
 
 // Module 1: Movie Recommendation based on Genre and Format preferences
 void handleRecommendation() {
-    int genreChoice = 0; // Stores the selected genre
-    int formatChoice = 0; // Stores the selected viewing format
+    int genreChoice = 0;
+    int formatChoice = 0;
 
     cout << "\n===============================================================\n";
     cout << "          MODULE 1: PERSONALIZED CONTENT RECOMMENDER           \n";
@@ -202,7 +202,7 @@ void handleRecommendation() {
 
 // Module 2: Netflix Subscription Plan Advisor & Billing Calculator
 void handleSubscriptionCalculator() {
-    int planChoice = 0; // Stores the selected subscription plan
+    int planChoice = 0;
     int months = 0;
     char isTelcoBundle;
     double monthlyRate = 0.0;
@@ -261,7 +261,12 @@ void handleSubscriptionCalculator() {
     }
 
     cout << "Subscribed via Malaysian Telco partner bundle (Astro / Unifi / Maxis)? (y/n): ";
-    cin >> isTelcoBundle;
+    while (cin >> isTelcoBundle && 
+           isTelcoBundle != 'y' && isTelcoBundle != 'Y' && 
+           isTelcoBundle != 'n' && isTelcoBundle != 'N') {
+        clearInputBuffer();
+        cout << "[!] Invalid input. Please enter 'y' for Yes or 'n' for No: ";
+    } // To prevent users' accidental invalid entries
 
     double subtotal = monthlyRate * months;
     double discount = 0.0;
