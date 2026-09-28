@@ -1,7 +1,6 @@
 # Netflix Smart Content Recommender & Subscription Assistant
 > **Course**: LDCW6123 - Fundamentals of Digital Competence for Programmer  
-> **Component**: Part 2 - Interactive C++ Program  
-> **Student Author**: Lee Wei Jin  
+> **Component**: Interactive C++ Program  
 > **Technology Topic**: Netflix (Disruptive Innovation in Digital Media Streaming)
 
 ---
