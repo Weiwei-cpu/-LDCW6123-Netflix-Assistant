@@ -20,7 +20,7 @@ The program is modularized into dedicated functions:
 - `displayHeader()` / `displayMainMenu()`: Professional user interface layout.
 - `handleRecommendation()`: Processes multi-criteria choices to recommend high-rated titles.
 - `handleSubscriptionCalculator()`: Calculates subscription pricing, ISP/Telco fiber partner rebates, and per-screen shared costs.
-- `handleInnovationInsights()`: Interactive theoretical briefing directly linked to Part 1 rubric requirements.
+- `handleInnovationInsights()`: Interactive theoretical briefing.
 - `clearInputBuffer()`: Robust error handling preventing program termination on invalid user input.
 
 ---
