@@ -1,13 +1,3 @@
-// ============================================================================
-// Course  : LDCW6123 - Fundamentals of Digital Competence for Programmer
-// Project : Part 2 - Interactive C++ Program
-// Topic   : Netflix Smart Content Recommender & Subscription Assistant
-// Author  : Lee Wei Jin
-// Description: An interactive C++ system simulating Netflix core services and
-//              showcasing its disruptive innovation trajectory from physical
-//              DVD rentals to global algorithmic video streaming.
-// ============================================================================
-
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -296,7 +286,7 @@ void handleSubscriptionCalculator() {
     cout << "---------------------------------------------------------------\n\n";
 }
 
-// Module 3: Netflix Disruptive Innovation Insights (Direct Link to Part 1)
+// Module 3: Netflix Disruptive Innovation Insights 
 void handleInnovationInsights() {
     int subChoice = 0;
 
