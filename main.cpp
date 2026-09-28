@@ -157,7 +157,7 @@ void handleRecommendation() {
             cout << "Synopsis    : An FBI profiler pursues the world's most wanted art thief\n";
             cout << "              in a globe-trotting action-comedy adventure.\n";
         }
-    } else if (genreChoice == 4) { // Drama & Romance
+    } else if (genreChoice == 4) { // Drama & Romancee
         if (formatChoice == 1) {
             cout << "Title       : Crash Landing on You\n";
             cout << "Release     : 2019 - 2020 | Official IMDb Rating: 8.7/10\n";
