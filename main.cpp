@@ -318,11 +318,11 @@ void handleInnovationInsights() {
     cout << "\n------------------- INNOVATION BRIEFING -----------------------\n";
     if (subChoice == 1) {
         cout << "[DISRUPTIVE INNOVATION MODEL (Clayton Christensen)]\n";
-        cout << "- 1997: Inception as DVD-by-mail service with NO late fees.\n";
+        cout << "- 1997            : Inception as DVD-by-mail service with NO late fees.\n";
         cout << "- Low-End Foothold: Targeted inconvenient video-store renters.\n";
-        cout << "- 2007: Introduced On-Demand Digital Streaming technology.\n";
-        cout << "- Disruption: Overtook incumbents by moving upmarket into original\n";
-        cout << "  content production (House of Cards, Stranger Things).\n";
+        cout << "- 2007            : Introduced On-Demand Digital Streaming technology.\n";
+        cout << "- Disruption      : Overtook incumbents by moving upmarket into original\n";
+        cout << "                    content production (House of Cards, Stranger Things).\n";
     } else if (subChoice == 2) {
         cout << "[BLOCKBUSTER (INCUMBENT) vs NETFLIX (DISRUPTOR)]\n";
         cout << "Feature              Blockbuster              Netflix\n";
