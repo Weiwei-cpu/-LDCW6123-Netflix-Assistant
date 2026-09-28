@@ -24,7 +24,7 @@ void handleSubscriptionCalculator();
 void handleInnovationInsights();
 
 int main() {
-    int choice = 0;
+    int choice = 0; // Stores the user's menu selection
 
     displayHeader();
 
