@@ -202,7 +202,7 @@ void handleRecommendation() {
 
 // Module 2: Netflix Subscription Plan Advisor & Billing Calculator
 void handleSubscriptionCalculator() {
-    int planChoice = 0;
+    int planChoice = 0; // Stores the selected subscription plan
     int months = 0;
     char isTelcoBundle;
     double monthlyRate = 0.0;
