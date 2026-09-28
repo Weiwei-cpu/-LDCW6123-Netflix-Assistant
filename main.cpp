@@ -171,7 +171,7 @@ void handleRecommendation() {
             cout << "Synopsis    : A dedicated musician and an aspiring actress struggle\n";
             cout << "              to reconcile their aspirations with their romance.\n";
         }
-    } else if (genreChoice == 5) { // Documentary
+    } else if (genreChoice == 5) { // Documentary 
         if (formatChoice == 1) {
             cout << "Title       : Formula 1: Drive to Survive\n";
             cout << "Release     : 2019 - Present | Official IMDb Rating: 8.5/10\n";
