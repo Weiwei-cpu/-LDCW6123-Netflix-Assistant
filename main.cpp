@@ -92,7 +92,7 @@ void clearInputBuffer() {
 
 // Module 1: Movie Recommendation based on Genre and Format preferences
 void handleRecommendation() {
-    int genreChoice = 0;
+    int genreChoice = 0; // Stores the selected genre
     int formatChoice = 0;
 
     cout << "\n===============================================================\n";
