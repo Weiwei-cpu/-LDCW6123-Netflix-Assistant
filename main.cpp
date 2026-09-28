@@ -119,27 +119,27 @@ void handleRecommendation() {
         if (formatChoice == 1) {
             cout << "Title       : Money Heist (La Casa de Papel)\n";
             cout << "Release     : 2017 - 2021 | Official IMDb Rating: 8.2/10\n";
-            cout << "Type        : TV Series (5 Seasons) | Match Rating: 98%\n";
+            cout << "Type        : TV Series (5 Seasons)\n";
             cout << "Synopsis    : A criminal mastermind 'The Professor' plans the biggest\n";
             cout << "              heist in recorded history on the Royal Mint of Spain.\n";
         } else {
             cout << "Title       : Extraction 2\n";
             cout << "Release     : 2023 | Official IMDb Rating: 7.0/10\n";
-            cout << "Type        : Movie (123 mins) | Match Rating: 94%\n";
+            cout << "Type        : Movie (123 mins)\n";
             cout << "Synopsis    : Commando Tyler Rake embarks on another deadly mission\n";
             cout << "              to rescue a battered family from a ruthless gangster.\n";
         }
     } else if (genreChoice == 2) { // Sci-Fi
         if (formatChoice == 1) {
             cout << "Title       : Stranger Things\n";
-            cout << "Release     : 2016 - Present | Official IMDb Rating: 8.7/10\n";
-            cout << "Type        : TV Series (4 Seasons) | Match Rating: 97%\n";
+            cout << "Release     : 2016 - 2025 | Official IMDb Rating: 8.7/10\n";
+            cout << "Type        : TV Series (5 Seasons)\n";
             cout << "Synopsis    : In 1980s Indiana, a group of young friends uncover secret\n";
             cout << "              government experiments and a supernatural portal to the Upside Down.\n";
         } else {
             cout << "Title       : Interstellar\n";
             cout << "Release     : 2014 | Official IMDb Rating: 8.7/10\n";
-            cout << "Type        : Movie (169 mins) | Match Rating: 96%\n";
+            cout << "Type        : Movie (169 mins)\n";
             cout << "Synopsis    : A team of explorers travel through a wormhole in space\n";
             cout << "              in an attempt to ensure humanity's survival.\n";
         }
@@ -147,13 +147,13 @@ void handleRecommendation() {
         if (formatChoice == 1) {
             cout << "Title       : Brooklyn Nine-Nine\n";
             cout << "Release     : 2013 - 2021 | Official IMDb Rating: 8.4/10\n";
-            cout << "Type        : TV Comedy Series (8 Seasons) | Match Rating: 95%\n";
+            cout << "Type        : TV Comedy Series (8 Seasons)\n";
             cout << "Synopsis    : Hilarious antics of a quirky NYPD detective squad led\n";
             cout << "              by Captain Raymond Holt.\n";
         } else {
             cout << "Title       : Red Notice\n";
             cout << "Release     : 2021 | Official IMDb Rating: 6.3/10\n";
-            cout << "Type        : Movie (118 mins) | Match Rating: 92%\n";
+            cout << "Type        : Movie (118 mins)\n";
             cout << "Synopsis    : An FBI profiler pursues the world's most wanted art thief\n";
             cout << "              in a globe-trotting action-comedy adventure.\n";
         }
@@ -161,13 +161,13 @@ void handleRecommendation() {
         if (formatChoice == 1) {
             cout << "Title       : Crash Landing on You\n";
             cout << "Release     : 2019 - 2020 | Official IMDb Rating: 8.7/10\n";
-            cout << "Type        : K-Drama Series (16 Episodes) | Match Rating: 99%\n";
+            cout << "Type        : K-Drama Series (16 Episodes)\n";
             cout << "Synopsis    : A South Korean heiress accidentally paraglides into\n";
             cout << "              North Korea and falls in love with an army officer.\n";
         } else {
             cout << "Title       : La La Land\n";
             cout << "Release     : 2016 | Official IMDb Rating: 8.0/10\n";
-            cout << "Type        : Movie (128 mins) | Match Rating: 93%\n";
+            cout << "Type        : Movie (128 mins)\n";
             cout << "Synopsis    : A dedicated musician and an aspiring actress struggle\n";
             cout << "              to reconcile their aspirations with their romance.\n";
         }
@@ -175,13 +175,13 @@ void handleRecommendation() {
         if (formatChoice == 1) {
             cout << "Title       : Formula 1: Drive to Survive\n";
             cout << "Release     : 2019 - Present | Official IMDb Rating: 8.5/10\n";
-            cout << "Type        : Docuseries (6 Seasons) | Match Rating: 96%\n";
+            cout << "Type        : Docuseries (8 Seasons)\n";
             cout << "Synopsis    : Exclusive behind-the-scenes drama and high-speed battles\n";
             cout << "              inside the Formula One World Championship.\n";
         } else {
             cout << "Title       : The Social Dilemma\n";
             cout << "Release     : 2020 | Official IMDb Rating: 7.6/10\n";
-            cout << "Type        : Documentary (94 mins) | Match Rating: 95%\n";
+            cout << "Type        : Documentary (94 mins)\n";
             cout << "Synopsis    : Tech insiders reveal how social media platforms reprogram\n";
             cout << "              civilization with dangerous algorithmic consequences.\n";
         }
